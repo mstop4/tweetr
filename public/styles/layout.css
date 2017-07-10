@@ -21,6 +21,13 @@ body {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
+main {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 140px ;
+  background-color: #ffffff;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
