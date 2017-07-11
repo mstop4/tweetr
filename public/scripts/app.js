@@ -27,7 +27,16 @@ function createTweetElement(tweet) {
   let currentTime = new Date(Date.now());
   let timeAgo = Math.floor((currentTime - tweet["created_at"]) / 1000);
 
-  $footer.append($("<p></p>").text(timeAgo + " seconds ago"));
+
+  if (timeAgo > (3600 * 24)) {
+    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600/24) + " days ago"));
+  } else if (timeAgo > 3600) {
+    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600) + " hours ago"));
+  } else if (timeAgo > 60) {
+    $footer.append($("<p></p>").text(Math.floor(timeAgo/60) + " minutes ago"));
+  } else {
+    $footer.append($("<p></p>").text(timeAgo + " seconds ago"));
+  }
 
   let $iconset = $("<span></span>").addClass("iconset");
   $footer.append($iconset);
@@ -36,11 +45,11 @@ function createTweetElement(tweet) {
   $iconset.append($("<img/>").attr("src", "images/002-arrows.png"));
   $iconset.append($("<img/>").attr("src", "images/001-like-of-filled-heart.png"));
 
-  $('.tweet-list').append($newTweet);
+  return $newTweet;
 }
 
-function renderTweets(tweetsList) {
+function renderTweets(tweetList) {
   for (var i = 0; i < tweetList.length; i++) {
-
+    $('.tweet-list').append(createTweetElement(tweetList[i]));
   }
 }
