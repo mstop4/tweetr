@@ -22,6 +22,11 @@
   padding: 4px;
 }
 
-.new-tweet .counter {
+.counter {
   float: right;
+  color: black;
+}
+
+.charOverflow {
+  color: red;
 }
