@@ -1,12 +1,16 @@
 console.log("I am composer-char-counter.js");
 
 $(document).ready( function() {
-  console.log("I'm ready");
+  console.log("composer-char-counter.js is ready.");
 
-  // I'm typing
+  // Typing in "Compose Tweet" text box:
+  // Keeps track of characters remaining
   $(".new-tweet").on("keypress", "textarea", function() {
-    console.log("SDFDSF");
-  })
 
+    let charsLeft = 140 - $(this).val().length;
+    let counterLabel = $(this).closest(".new-tweet").find(".counter");
+    counterLabel.text(charsLeft);
+
+  });
 });
 
