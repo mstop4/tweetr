@@ -31,8 +31,7 @@
   padding: 0 1em;
 }
 
-/* Avatar */
-.tweet-list article.tweet-container img.avatar {
+img.avatar {
   width: 64px;
   height: auto;
   float: left;
@@ -67,12 +66,13 @@
   float: left;
 }
 
-.tweet-list article.tweet-container img.icon {
-  width: 16px;
-  height: auto;
-  margin: 0 2px;
+.iconset {
   display: none;
   float: right;
+}
+
+.iconset img {
+  margin: 0 1px;
 }
 
 /* Tweet body */

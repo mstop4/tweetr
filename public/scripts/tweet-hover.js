@@ -7,7 +7,7 @@ $(document).ready( function() {
 
     console.log("Mouse in");
     $(this).addClass("highlight");
-    $(this).find(".icon").show();
+    $(this).find(".iconset").show();
     e.stopPropagation();
 
   });
@@ -16,7 +16,7 @@ $(document).ready( function() {
 
     console.log("mouse out");
     $(this).removeClass("highlight");
-    $(this).find(".icon").hide();
+    $(this).find(".iconset").hide();
     e.stopPropagation();
 
   });
