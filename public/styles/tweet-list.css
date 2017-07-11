@@ -26,13 +26,15 @@
   border-radius: 10px 10px 0 0;
   font-family: 'Gloria Hallelujah', cursive;
   height: 80px;
-  line-height: 80px;
+  display: flex;
+  align-items: center;
   padding: 0 1em;
 }
 
-.tweet-list article.tweet-container img {
+/* Avatar */
+.tweet-list article.tweet-container img.avatar {
   width: 64px;
-  height: 64px;
+  height: auto;
   float: left;
   margin: 0 6px 0 0;
   border-radius: 6px;
@@ -53,7 +55,8 @@
 
 .tweet-list article.tweet-container footer {
   height: 40px;
-  line-height: 40px;
+  display: flex;
+  align-items: center;
   padding: 0 1em;
   border-top: 2px;
   border-top-style: solid;
@@ -64,7 +67,10 @@
   float: left;
 }
 
-.iconset {
+.tweet-list article.tweet-container img.icon {
+  width: 16px;
+  height: auto;
+  margin: 0 2px;
   display: none;
   float: right;
 }
