@@ -1,5 +1,10 @@
 /* tweet-list.css */
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /* The list of tweets itself */
 
 .tweet-list {
@@ -8,20 +13,21 @@
 
 /* An individual tweet */
 
-.tweet-list article.tweet-container {
+article.tweet-container {
   background-color: #e0e0ff;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
   border-radius: 10px;
+  border-width: 1px;
 }
 
-.highlight {
+article.highlight {
   border-color: black;
-  border-style: solid;
-  border-width: 1px;
 }
 
 /* Tweet header */
 
-.tweet-list article.tweet-container header {
+article.tweet-container header {
   background-color: #8080c0;
   border-radius: 10px 10px 0 0;
   font-family: 'Gloria Hallelujah', cursive;
@@ -34,25 +40,23 @@
 img.avatar {
   width: 64px;
   height: auto;
-  float: left;
   margin: 0 6px 0 0;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.tweet-list .username {
+.username {
   font-size: 20px;
-  float: left;
+  flex-grow: 1;
 }
 
-.tweet-list .handle {
+.handle {
   font-size: 14px;
-  float: right;
 }
 
 /* Tweet footer */
 
-.tweet-list article.tweet-container footer {
+article.tweet-container footer {
   height: 40px;
   display: flex;
   align-items: center;
@@ -62,13 +66,13 @@ img.avatar {
   border-color: #c0c0c0;
 }
 
-.tweet-list article.tweet-container footer p {
+article.tweet-container footer p {
   float: left;
+  flex-grow: 1;
 }
 
 .iconset {
   display: none;
-  float: right;
 }
 
 .iconset img {
@@ -77,13 +81,18 @@ img.avatar {
 
 /* Tweet body */
 
-.tweet-list .tweet-body {
+.tweet-body {
   height: 120px;
   display: flex;
   align-items: center;
   padding: 0 1em;
 }
 
-.tweet-lists .tweet-body p {
+.tweet-body p {
   margin: 0;
+}
+
+.hashtag {
+  font-style: oblique;
+  color: #d040ff;
 }
