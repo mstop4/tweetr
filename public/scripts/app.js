@@ -6,8 +6,6 @@
 
 function createTweetElement(tweet) {
 
-  console.dir(tweet);
-
   let $newTweet = $("<article></article>").addClass("tweet-container");
 
   let $header = $("<header></header>");
@@ -21,21 +19,36 @@ function createTweetElement(tweet) {
   $newTweet.append($tweetBody);
 
   $tweetBody.append($("<p></p>").text(tweet["content"]["text"]));
+  //$tweetBody.append($("<p></p>").text("<script>alert('oh noez!');</script>"));
 
   let $footer = $("<footer></footer");
   $newTweet.append($footer);
+
+
+  // Calculate the time since the tweet was created.
   let currentTime = new Date(Date.now());
-  let timeAgo = Math.floor((currentTime - tweet["created_at"]) / 1000);
+  let createTime = new Date(tweet["created_at"]);
+  let timeAgo = Math.floor((currentTime - createTime) / 1000);
 
-
-  if (timeAgo > (3600 * 24)) {
-    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600/24) + " days ago"));
-  } else if (timeAgo > 3600) {
-    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600) + " hours ago"));
-  } else if (timeAgo > 60) {
-    $footer.append($("<p></p>").text(Math.floor(timeAgo/60) + " minutes ago"));
-  } else {
+  // In seconds
+  if (timeAgo < 60) {
     $footer.append($("<p></p>").text(timeAgo + " seconds ago"));
+
+  // In minutes
+  } else if (timeAgo < 3600) {
+    $footer.append($("<p></p>").text(Math.floor(timeAgo/60) + " minutes ago"));
+
+  // In hours
+  } else if (timeAgo < (3600 * 24)) {
+    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600) + " hours ago"));
+
+  // In days
+  } else if (timeAgo < (3600 * 24 * 7)) {
+    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600/24) + " days ago"));
+
+  // More than a week
+  } else {
+    $footer.append($("<p></p>").text(createTime.toDateString()));
   }
 
   let $iconset = $("<span></span>").addClass("iconset");
