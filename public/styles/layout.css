@@ -18,7 +18,7 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Philosopher', sans-serif;
 }
 
 main {
@@ -26,6 +26,7 @@ main {
   margin: 0 auto;
   margin-top: 140px;
   padding: 1em;
+  border-radius: 10px;
   background-color: #ffffff;
 }
 

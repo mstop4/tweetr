@@ -1,0 +1,83 @@
+/* tweet-list.css */
+
+/* The list of tweets itself */
+
+.tweet-list {
+  margin: 1em;
+}
+
+/* An individual tweet */
+
+.tweet-list article.tweet-container {
+  background-color: #e0e0ff;
+  border-radius: 10px;
+}
+
+.highlight {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Tweet header */
+
+.tweet-list article.tweet-container header {
+  background-color: #8080c0;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Gloria Hallelujah', cursive;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 1em;
+}
+
+.tweet-list article.tweet-container img {
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin: 0 6px 0 0;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.tweet-list .username {
+  font-size: 20px;
+  float: left;
+}
+
+.tweet-list .handle {
+  font-size: 14px;
+  float: right;
+}
+
+/* Tweet footer */
+
+.tweet-list article.tweet-container footer {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 1em;
+  border-top: 2px;
+  border-top-style: solid;
+  border-color: #c0c0c0;
+}
+
+.tweet-list article.tweet-container footer p {
+  float: left;
+}
+
+.iconset {
+  display: none;
+  float: right;
+}
+
+/* Tweet body */
+
+.tweet-list .tweet-body {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.tweet-lists .tweet-body p {
+  margin: 0;
+}

@@ -7,13 +7,14 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- Font -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Philosopher" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-list.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -21,6 +22,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
   </head>
 
   <body>
@@ -46,8 +48,28 @@
 
       </section>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec nunc fringilla, sagittis elit ut, porta augue. Phasellus eget nulla nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus volutpat ex at tempus blandit. Nunc ex urna, iaculis feugiat lobortis a, posuere et sem. Donec ultricies nisl elit. Suspendisse aliquet tortor in libero bibendum viverra. In quis ante tincidunt, congue ex sit amet, accumsan magna. Aliquam erat volutpat. Proin ac sem erat. Cras aliquet non lectus vitae dictum. Mauris sodales consequat porta. Cras tempor ut erat commodo vestibulum. Donec volutpat, purus nec facilisis ultrices, turpis nulla semper diam, in efficitur justo diam nec ipsum.</p>
+      <!-- Sample tweet -->
+      <section class="tweet-list">
+        <article class="tweet-container highlight">
 
+          <header>
+            <img src="images/books-icon.png">
+            <span class="username">Lorem Ipsum</span>
+            <span class="handle">@lorem_ipsum</span>
+          </header>
+
+          <div class="tweet-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi velit, hendrerit ut auctor nec, placerat id elit.<br/>#loremipsum</p>
+          </div>
+
+          <footer>
+            <span>1000 days ago</span>
+            <span class="iconset"> A B C </span>
+          </footer>
+
+        </article>
+      </section>
+      <!-- -->
     </main>
 
   </body>

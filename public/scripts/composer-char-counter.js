@@ -4,8 +4,8 @@ console.log("I am composer-char-counter.js");
 function countCharacters() {
 
   const maxChars = 140;
-  let charsLeft = maxChars - context.val().length;
-  let counterLabel = context.closest(".new-tweet").find(".counter");
+  let charsLeft = maxChars - $(this).val().length;
+  let counterLabel = $(this).closest(".new-tweet").find(".counter");
 
   counterLabel.text(charsLeft);
 
@@ -23,6 +23,6 @@ $(document).ready( function() {
 
   // Typing in "Compose Tweet" text box:
   // Updates character counter as you type
-  $(".new-tweet").on("input", "textarea", function () { countCharacters(); });
+  $(".new-tweet").on("input", "textarea", countCharacters);
 });
 
