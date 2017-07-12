@@ -8,8 +8,8 @@ $(document).ready( function() {
   $('.new-tweet').on('submit', 'form', function(e) {
     e.preventDefault();
 
-    let message = $(this).find('textarea').val();
-    console.log(message);
+    // let message = $(this).find('textarea').val();
+    // console.log(message);
 
     $.ajax({
       url: '/tweets/',

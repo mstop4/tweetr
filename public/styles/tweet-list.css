@@ -19,6 +19,7 @@ article.tweet-container {
   border-style: solid;
   border-radius: 10px;
   border-width: 1px;
+  margin: 1em 0;
 }
 
 article.highlight {

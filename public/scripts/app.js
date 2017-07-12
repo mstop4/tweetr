@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+console.log("I am app.js");
+
 function createTweetElement(tweet) {
 
   let $newTweet = $("<article></article>").addClass("tweet-container");
@@ -66,3 +68,16 @@ function renderTweets(tweetList) {
     $('.tweet-list').append(createTweetElement(tweetList[i]));
   }
 }
+
+$(document).ready( function() {
+  console.log("app.js is ready.");
+
+  $.ajax( {
+    url: '/tweets',
+    method: 'GET',
+    success: function(obj) {
+      console.log("tweets ok");
+      renderTweets(obj);
+    }
+  });
+});
