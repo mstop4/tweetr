@@ -4,13 +4,11 @@ $(document).ready( function() {
   console.log("tweet-hover is ready.");
 
   // Mouse over a tweet - highlights a tweet
-  $(".tweet-list").on("mouseover", ".tweet-container", function(e) {
+  $(".tweet-list").on("mouseenter", ".tweet-container", function(e) {
 
     console.log("Mouse in");
     $(this).addClass("highlight");
     $(this).find(".iconset").show();
-    e.stopPropagation();
-
   });
 
   // Mouse leave a tweet - unhighlights a tweet
@@ -19,7 +17,5 @@ $(document).ready( function() {
     console.log("mouse out");
     $(this).removeClass("highlight");
     $(this).find(".iconset").hide();
-    e.stopPropagation();
-
   });
 });

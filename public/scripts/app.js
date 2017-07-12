@@ -64,7 +64,9 @@ function createTweetElement(tweet) {
 }
 
 function renderTweets(tweetList) {
-  for (var i = 0; i < tweetList.length; i++) {
+  $('article').remove();
+
+  for (var i = tweetList.length-1; i >= 0; i--) {
     $('.tweet-list').append(createTweetElement(tweetList[i]));
   }
 }
