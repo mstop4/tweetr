@@ -9,6 +9,8 @@
   color: #e8fdff;
   padding-left: 2em;
   padding-right: 2em;
+  z-index: 1000;
+  display: flex;
 }
 
 #nav-bar .header {
@@ -17,6 +19,7 @@
   margin-left: 5px;
   font-size: 200%;
   line-height: 80px;
+  flex-grow: 1;
 }
 
 #nav-bar .logo {
@@ -24,4 +27,8 @@
   height: 80px;
   float: left;
   margin-right: 5px;
+}
+
+#nav-bar .compose{
+  margin: 1em 0;
 }

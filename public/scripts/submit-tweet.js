@@ -7,6 +7,7 @@ $(document).ready( function() {
 
   $('#nav-bar').on('click', '.compose', function() {
     $('.new-tweet').slideToggle();
+    $('.new-tweet').find('textarea').select();
   });
 
   $('.new-tweet').on('submit', 'form', function(e) {
@@ -14,8 +15,12 @@ $(document).ready( function() {
 
     let message = $(this).find('textarea').val();
 
-    if (!message || message.length > 140) {
-      alert("You fool!");
+    if (!message) {
+      $(this).find('.form-message').text("Tweet is empty! 🙁");
+      return;
+
+    } else if (message.length > 140) {
+      $(this).find('.form-message').text("Tweet is too long! 😵");
       return;
     }
 
