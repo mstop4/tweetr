@@ -1,3 +1,4 @@
+
 /* submit-tweet.js */
 console.log("I am submit-tweet.js");
 
@@ -20,31 +21,24 @@ $(document).ready( function() {
   $('.new-tweet').on('submit', 'form', function(e) {
     e.preventDefault();
 
-    // Check tweet length
     let message = $(this).find('textarea').val();
 
     if (!message) {
-      $(this).find('.form-message').text("Tweet is empty!").addClass("form-error");
+      $(this).find('.form-message').text("Tweet is empty! 🙁");
       return;
 
     } else if (message.length > 140) {
-      $(this).find('.form-message').text("Tweet is too long!").addClass("form-error");
+      $(this).find('.form-message').text("Tweet is too long! 😵");
       return;
     }
-
-    // clear form
-    $(this).find('textarea').val("");
-    $(this).find('textarea').trigger('input');
-
-    // send tweet
-    console.log("tweet sent");
-    $(this).find('.form-message').text("Tweet sent!").addClass("form-ok");
 
     $.ajax({
       url: '/tweets/',
       data: $(this).serialize(),
       method: 'POST',
       success: function () {
+
+        console.log('tweet submit OK');
 
         // refresh tweet list
         $.ajax( {
