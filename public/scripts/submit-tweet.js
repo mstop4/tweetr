@@ -24,7 +24,7 @@ $(document).ready( function() {
     let message = $(this).find('textarea').val();
 
     if (!message) {
-      $(this).find('.form-message').text("Tweet is empty!").addClass("form-error");
+      $(this).find('.form-message').text("Tweet is empty! 🤷").addClass("form-error");
       return;
 
     } else if (message.length > 140) {
