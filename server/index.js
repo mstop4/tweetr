@@ -41,7 +41,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.log("Example app listening on port " + PORT);
   });
 
-  db.close();
+  //db.close();
 });
 
 // The in-memory database of tweets. It's a basic object with an array in it.
