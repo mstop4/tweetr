@@ -37,6 +37,7 @@ $(document).ready( function() {
     $(this).find('textarea').trigger('input');
 
     // send tweet
+    console.log("tweet sent");
     $(this).find('.form-message').text("Tweet sent!").addClass("form-ok");
 
     $.ajax({
