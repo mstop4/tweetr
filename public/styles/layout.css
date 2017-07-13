@@ -3,16 +3,20 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
 
 /*
  * Global layout stuff
  */
+
+html {
+  box-sizing: border-box;
+  /* Chrome, Safari */
+  /*-webkit-transform: rotate(180deg);*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
   margin: 0;

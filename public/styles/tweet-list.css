@@ -1,4 +1,5 @@
 /* tweet-list.css */
+
 html {
   box-sizing: border-box;
 }
@@ -91,6 +92,8 @@ article.tweet-container footer p {
 
 .tweet-body p {
   margin: 0;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .hashtag {

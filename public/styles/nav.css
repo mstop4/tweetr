@@ -13,9 +13,9 @@
   display: flex;
 }
 
+/* Title */
 #nav-bar .header {
   font-family: 'Gloria Hallelujah', cursive;
-  float: left;
   margin-left: 5px;
   font-size: 200%;
   line-height: 80px;
@@ -25,10 +25,22 @@
 #nav-bar .logo {
   width: 80px;
   height: 80px;
-  float: left;
   margin-right: 5px;
 }
 
 #nav-bar .compose{
-  margin: 1em 0;
+  background-color: #80ffc0;
+  border: 0;
+  width: 200px;
+  height: 60px;
+  margin: auto 0;
+  padding: 0 15px;
+  color: black;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+#nav-bar .compose img {
+  margin: 0 8px 0 0;
 }

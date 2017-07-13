@@ -6,6 +6,7 @@
 
 console.log("I am app.js");
 
+// Creates a tweet element to display in the tweet list
 function createTweetElement(tweet) {
 
   let $newTweet = $("<article></article>").addClass("tweet-container");
@@ -21,11 +22,9 @@ function createTweetElement(tweet) {
   $newTweet.append($tweetBody);
 
   $tweetBody.append($("<p></p>").text(tweet["content"]["text"]));
-  //$tweetBody.append($("<p></p>").text("<script>alert('oh noez!');</script>"));
 
   let $footer = $("<footer></footer");
   $newTweet.append($footer);
-
 
   // Calculate the time since the tweet was created.
   let currentTime = new Date(Date.now());
@@ -63,7 +62,10 @@ function createTweetElement(tweet) {
   return $newTweet;
 }
 
+// Creates elements for each tweet in the database
 function renderTweets(tweetList) {
+
+  // clear all existing tweet elements first
   $('article').remove();
 
   for (var i = tweetList.length-1; i >= 0; i--) {
@@ -74,6 +76,7 @@ function renderTweets(tweetList) {
 $(document).ready( function() {
   console.log("app.js is ready.");
 
+  // Render all tweets
   $.ajax( {
     url: '/tweets',
     method: 'GET',
