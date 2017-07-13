@@ -24,13 +24,17 @@ $(document).ready( function() {
     let message = $(this).find('textarea').val();
 
     if (!message) {
-      $(this).find('.form-message').text("Tweet is empty! 🙁");
+      $(this).find('.form-message').text("Tweet is empty!").addClass("form-error");
       return;
 
     } else if (message.length > 140) {
-      $(this).find('.form-message').text("Tweet is too long! 😵");
+      $(this).find('.form-message').text("Tweet is too long!").addClass("form-error");
       return;
     }
+
+    // send tweet
+    console.log("tweet sent");
+    $(this).find('.form-message').text("Tweet sent!").addClass("form-ok");
 
     $.ajax({
       url: '/tweets/',
@@ -50,5 +54,10 @@ $(document).ready( function() {
         });
       }
     });
+
+    // clear form
+    $(this).find('textarea').val("");
+    $(this).find('textarea').trigger('input');
+
   });
 });
