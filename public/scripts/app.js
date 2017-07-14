@@ -6,13 +6,13 @@
 
 console.log("I am app.js");
 
+// Calculate the time since the tweet was created.
 function calculateAge(createTime) {
-    // Calculate the time since the tweet was created.
   let currentTime = new Date(Date.now());
   let secondsAgo = Math.floor((currentTime - createTime) / 1000);
 
   // Just now
-  if (secondsAgo === 0) {
+  if (secondsAgo <= 0) {
     return "Just now";
 
   // In seconds
@@ -57,7 +57,7 @@ function createTweetElement(tweet) {
   let $footer = $("<footer></footer");
   $newTweet.append($footer);
 
-  $footer.append($("<p></p>").text(calculateAge(new Date(tweet["created_at"])));
+  $footer.append($("<p></p>").text(calculateAge(new Date(tweet["created_at"]))));
 
   let $iconset = $("<span></span>").addClass("iconset");
   $footer.append($iconset);

@@ -35,6 +35,7 @@ article.tweet-container header {
   font-family: 'Gloria Hallelujah', cursive;
   height: 80px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 0 1em;
 }
@@ -48,12 +49,12 @@ img.avatar {
 }
 
 .username {
-  font-size: 20px;
+  font-size: 1.5em;
   flex-grow: 1;
 }
 
 .handle {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 /* Tweet footer */
@@ -99,4 +100,25 @@ article.tweet-container footer p {
 .hashtag {
   font-style: oblique;
   color: #d040ff;
+}
+
+@media (max-width: 900px) {
+  article.tweet-container header {
+    flex-direction: column;
+    height: 160px;
+  }
+
+    .username {
+    flex-grow: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .username {
+    font-size: 1em;
+  }
+
+  .handle {
+    font-size: 0.67em;
+  }
 }
