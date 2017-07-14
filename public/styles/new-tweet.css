@@ -1,37 +1,29 @@
-/* new-tweet.css */
-
+/* new-tweet.sass */
 .new-tweet {
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   background-color: #e0e0e0;
   border-radius: 10px;
   padding: 0.5em 1em 1em;
-  margin: 1em 1em 0 1em;
-}
-
-.new-tweet h2 {
-  border-bottom: 2px;
-  border-bottom-style: solid;
-  border-color: #c0c0c0;
-}
-
-.new-tweet textarea {
-  width: 100%;
-  padding: 4px;
-}
+  margin: 1em 1em 0 1em; }
+  .new-tweet h2 {
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-color: #c0c0c0; }
+  .new-tweet textarea {
+    width: 100%;
+    padding: 4px; }
 
 .counter {
   float: right;
-  color: black;
-}
+  color: black; }
 
 .charOverflow {
-  color: red;
-}
+  color: red; }
 
 .form-error {
-  color: red;
-}
+  color: red; }
 
 .form-ok {
-  color: green;
-}
+  color: green; }
+
+/*# sourceMappingURL=new-tweet.css.map */
