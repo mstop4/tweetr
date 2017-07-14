@@ -1,5 +1,8 @@
 node_modules/
 example/
+public/styles/sass/
+public/styles/.sass-cache/
+*.css.map
 .env
 .DS_Store
 *.log

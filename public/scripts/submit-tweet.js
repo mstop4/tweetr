@@ -12,7 +12,7 @@ $(document).ready( function() {
       $('.new-tweet').slideDown(400);
       $('.new-tweet').find('textarea').focus();
 
-      $('html, body').animate({
+      $('html').animate({
         scrollTop: ($('.new-tweet').offset().top)
         },1000);
 

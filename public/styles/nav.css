@@ -1,5 +1,4 @@
-/* nav.css */
-
+/* nav.sass */
 #nav-bar {
   position: fixed;
   top: 0;
@@ -10,37 +9,29 @@
   padding-left: 2em;
   padding-right: 2em;
   z-index: 1000;
-  display: flex;
-}
+  display: flex; }
+  #nav-bar .header {
+    font-family: "Gloria Hallelujah", cursive;
+    margin-left: 5px;
+    font-size: 200%;
+    line-height: 80px;
+    flex-grow: 1; }
+  #nav-bar .logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px; }
+  #nav-bar .compose {
+    background-color: #80ffc0;
+    border: 0;
+    border-radius: 8px;
+    margin: auto 0;
+    padding: 0 15px;
+    width: 200px;
+    height: 60px;
+    color: black;
+    font-family: "Gloria Hallelujah", cursive;
+    font-size: 18px; }
+    #nav-bar .compose img {
+      margin: 0 8px 0 0; }
 
-/* Title */
-#nav-bar .header {
-  font-family: 'Gloria Hallelujah', cursive;
-  margin-left: 5px;
-  font-size: 200%;
-  line-height: 80px;
-  flex-grow: 1;
-}
-
-#nav-bar .logo {
-  width: 80px;
-  height: 80px;
-  margin-right: 5px;
-}
-
-#nav-bar .compose{
-  background-color: #80ffc0;
-  border: 0;
-  width: 200px;
-  height: 60px;
-  margin: auto 0;
-  padding: 0 15px;
-  color: black;
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 18px;
-  border-radius: 8px;
-}
-
-#nav-bar .compose img {
-  margin: 0 8px 0 0;
-}
+/*# sourceMappingURL=nav.css.map */
