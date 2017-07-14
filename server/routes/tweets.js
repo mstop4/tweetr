@@ -42,26 +42,24 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  tweetsRoutes.post("/like/", function(req, res) {
+  tweetsRoutes.put("/like/", function(req, res) {
 
     DataHelpers.addLike(req.body.tweetID,req.body.userID, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        console.log("Like saved?");
         res.status(201).send();
       }
     });
   });
 
-  tweetsRoutes.post("/unlike/", function(req, res) {
+  tweetsRoutes.put("/unlike/", function(req, res) {
 
     DataHelpers.removeLike(req.body.tweetID,req.body.userID, (err) => {
 
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        console.log("Unlike saved?");
         res.status(201).send();
       }
     });

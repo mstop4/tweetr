@@ -1,5 +1,3 @@
-console.log("I am composer-char-counter.js");
-
 // Keeps track of characters remaining
 function countCharacters() {
 
@@ -19,7 +17,6 @@ function countCharacters() {
 }
 
 $(document).ready( function() {
-  console.log("composer-char-counter.js is ready.");
 
   // Typing in "Compose Tweet" text box:
   // Updates character counter as you type

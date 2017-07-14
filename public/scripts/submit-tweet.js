@@ -18,7 +18,6 @@ $(document).ready( function() {
     }
 
     // send tweet
-    console.log("tweet sent");
     $(this).find('.form-message').text("Tweet sent!").addClass("form-ok").removeClass("form-error");
 
     $.ajax({
@@ -26,8 +25,6 @@ $(document).ready( function() {
       data: $(this).serialize(),
       method: 'POST',
       success: function () {
-
-        console.log('tweet submit OK');
 
         // refresh tweet list
         $.ajax( {
