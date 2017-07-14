@@ -62,9 +62,9 @@ function createTweetElement(tweet) {
   let $iconset = $("<span></span>").addClass("iconset");
   $footer.append($iconset);
 
-  $iconset.append($("<img/>").attr("src", "images/003-black.png"));
-  $iconset.append($("<img/>").attr("src", "images/002-arrows.png"));
-  $iconset.append($("<img/>").attr("src", "images/001-like-of-filled-heart.png"));
+  $iconset.append($("<i class='fa fa-flag'></i>"));
+  $iconset.append($("<i class='fa fa-retweet'></i>"));
+  $iconset.append($("<i class='fa fa-heart'></i>"));
 
   return $newTweet;
 }
