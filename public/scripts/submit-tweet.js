@@ -1,25 +1,6 @@
-
 /* submit-tweet.js */
-console.log("I am submit-tweet.js");
 
 $(document).ready( function() {
-  console.log("submit-tweet.js is ready.");
-
-  // Compose button: shows and hides "Compose Tweet" form by sliding
-  $('#nav-bar').on('click', '.compose', function() {
-
-    if ($('.new-tweet').css('display') === 'none') {
-      $('.new-tweet').slideDown(400);
-      $('.new-tweet').find('textarea').focus();
-
-      $('html').animate({
-        scrollTop: ($('.new-tweet').offset().top)
-        },1000);
-
-    } else {
-      $('.new-tweet').slideUp(400);
-    }
-  });
 
   // Submit tweet
   $('.new-tweet').on('submit', 'form', function(e) {

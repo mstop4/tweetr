@@ -82,6 +82,14 @@ article.tweet-container footer p {
   margin: 0 2px;
 }
 
+.iconset i.liked {
+  color: #FF80c0;
+}
+
+.iconset .likeCounter {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 /* Tweet body */
 
 .tweet-body {

@@ -64,7 +64,11 @@ function createTweetElement(tweet) {
 
   $iconset.append($("<i class='fa fa-flag'></i>"));
   $iconset.append($("<i class='fa fa-retweet'></i>"));
-  $iconset.append($("<i class='fa fa-heart'></i>"));
+  $iconset.append($("<i class='fa fa-heart likeButton'></i>"));
+
+  let $likeCounter = $("<span>0</span>").addClass("likeCounter");
+
+  $iconset.append($likeCounter);
 
   return $newTweet;
 }
@@ -73,22 +77,23 @@ function createTweetElement(tweet) {
 function renderTweets(tweetList) {
 
   // clear all existing tweet elements first
+  $('tweet-list').off("click", "likeButton");
   $('article').remove();
 
   for (var i = tweetList.length-1; i >= 0; i--) {
     $('.tweet-list').append(createTweetElement(tweetList[i]));
   }
+
+  $('.tweet-list').on("click", ".likeButton", likeButtonListener);
 }
 
 $(document).ready( function() {
-  console.log("app.js is ready.");
 
   // Render all tweets
   $.ajax( {
     url: '/tweets',
     method: 'GET',
     success: function(obj) {
-      console.log("tweets ok");
       renderTweets(obj);
     }
   });
