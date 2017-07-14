@@ -12,6 +12,10 @@ $(document).ready( function() {
       $('.new-tweet').slideDown(400);
       $('.new-tweet').find('textarea').focus();
 
+      $('html, body').animate({
+        scrollTop: ($('.new-tweet').offset().top)
+        },1000);
+
     } else {
       $('.new-tweet').slideUp(400);
     }
@@ -24,17 +28,17 @@ $(document).ready( function() {
     let message = $(this).find('textarea').val();
 
     if (!message) {
-      $(this).find('.form-message').text("Tweet is empty! 🤷").addClass("form-error");
+      $(this).find('.form-message').text("Tweet is empty!").addClass("form-error").removeClass("form-ok");
       return;
 
     } else if (message.length > 140) {
-      $(this).find('.form-message').text("Tweet is too long!").addClass("form-error");
+      $(this).find('.form-message').text("Tweet is too long!").addClass("form-error").removeClass("form-ok");;
       return;
     }
 
     // send tweet
     console.log("tweet sent");
-    $(this).find('.form-message').text("Tweet sent!").addClass("form-ok");
+    $(this).find('.form-message').text("Tweet sent!").addClass("form-ok").removeClass("form-error");
 
     $.ajax({
       url: '/tweets/',
