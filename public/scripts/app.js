@@ -81,15 +81,14 @@ function createTweetElement(tweet) {
 
 // Creates elements for each tweet in the database
 function renderTweets(tweetList) {
-
-  // clear all existing tweet elements first
-  $('tweet-list').off("click", "likeButton");
   $('article').remove();
 
   for (var i = tweetList.length-1; i >= 0; i--) {
     $('.tweet-list').append(createTweetElement(tweetList[i]));
   }
+}
 
+function addListeners() {
   $('.tweet-list').on("click", ".likeButton", likeButtonListener);
 }
 
@@ -101,6 +100,7 @@ $(document).ready( function() {
     method: 'GET',
     success: function(obj) {
       renderTweets(obj);
+      addListeners();
     }
   });
 });

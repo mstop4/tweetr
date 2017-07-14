@@ -5,6 +5,7 @@ function likeButtonListener() {
   let likes = Number($(this).closest(".iconset").find(".likeCounter").text());
   let tweetID = $(this).closest(".tweet-container").attr("data-id");
   let userID = "user";
+  console.log("whomp");
 
   if ($(this).hasClass("liked")) {
     $(this).removeClass("liked");
