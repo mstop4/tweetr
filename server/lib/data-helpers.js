@@ -25,10 +25,20 @@ module.exports = function makeDataHelpers(db) {
     },
 
     // Updates the number of likes for a tweet
-    updateLikes: function(tweetID, delta, callback) {
+    addLike: function(tweetID, userID, callback) {
       db.collection("tweets").update(
         { "_id": mongo.ObjectID(tweetID) },
-        { $inc: { likes: delta }
+        { $push: { likes: userID }
+      });
+
+      callback(null, true);
+    },
+
+    // Updates the number of likes for a tweet
+    removeLike: function(tweetID, userID, callback) {
+      db.collection("tweets").update(
+        { "_id": mongo.ObjectID(tweetID) },
+        { $pull: { likes: userID }
       });
 
       callback(null, true);

@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-console.log("I am app.js");
+const userID = "user";
 
 // Calculate the time since the tweet was created.
 function calculateAge(createTime) {
@@ -64,9 +64,15 @@ function createTweetElement(tweet) {
 
   $iconset.append($("<i class='fa fa-flag'></i>"));
   $iconset.append($("<i class='fa fa-retweet'></i>"));
-  $iconset.append($("<i class='fa fa-heart likeButton'></i>"));
 
-  let $likeCounter = $(`<span>${tweet["likes"]}</span>`).addClass("likeCounter");
+  if (tweet["likes"].indexOf(userID) !== -1) {
+      $iconset.append($("<i class='fa fa-heart likeButton liked'></i>"));
+  } else {
+      $iconset.append($("<i class='fa fa-heart likeButton'></i>"));
+  }
+
+  let numLikes = tweet["likes"].length;
+  let $likeCounter = $(`<span>${numLikes}</span>`).addClass("likeCounter");
 
   $iconset.append($likeCounter);
 

@@ -4,13 +4,15 @@
 function likeButtonListener() {
   let likes = Number($(this).closest(".iconset").find(".likeCounter").text());
   let tweetID = $(this).closest(".tweet-container").attr("data-id");
+  let userID = "user";
 
   if ($(this).hasClass("liked")) {
     $(this).removeClass("liked");
     $(this).closest(".iconset").find(".likeCounter").text(likes-1);
 
     $.ajax({
-      url: '/tweets/unlike/' + tweetID,
+      url: '/tweets/unlike/',
+      data: {'tweetID': tweetID, 'userID': userID},
       method: 'POST',
       success: function(obj) {
         console.log("OK Like");
@@ -22,7 +24,8 @@ function likeButtonListener() {
     $(this).closest(".iconset").find(".likeCounter").text(likes+1);
 
     $.ajax({
-      url: '/tweets/like/' + tweetID,
+      url: '/tweets/like/',
+      data: {'tweetID': tweetID, 'userID': userID},
       method: 'POST',
       success: function(obj) {
         console.log("OK Unlike");
