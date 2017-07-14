@@ -1,5 +1,7 @@
 "use strict";
 
+const mongo = require("mongodb");
+
 // Simulates the kind of delay we see with network or filesystem operations
 const simulateDelay = require("./util/simulate-delay");
 
@@ -20,6 +22,16 @@ module.exports = function makeDataHelpers(db) {
         const sortNewestFirst = (a, b) => a.created_at - b.created_at;
         callback(null, tweets.sort(sortNewestFirst));
       });
+    },
+
+    // Updates the number of likes for a tweet
+    updateLikes: function(tweetID, delta, callback) {
+      db.collection("tweets").update(
+        { "_id": mongo.ObjectID(tweetID) },
+        { $inc: { likes: delta }
+      });
+
+      callback(null, true);
     }
   };
 }

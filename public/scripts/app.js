@@ -40,7 +40,7 @@ function calculateAge(createTime) {
 // Creates a tweet element to display in the tweet list
 function createTweetElement(tweet) {
 
-  let $newTweet = $("<article></article>").addClass("tweet-container");
+  let $newTweet = $("<article></article>").addClass("tweet-container").attr("data-id", tweet["_id"]);
 
   let $header = $("<header></header>");
   $newTweet.append($header);
@@ -66,7 +66,7 @@ function createTweetElement(tweet) {
   $iconset.append($("<i class='fa fa-retweet'></i>"));
   $iconset.append($("<i class='fa fa-heart likeButton'></i>"));
 
-  let $likeCounter = $("<span>0</span>").addClass("likeCounter");
+  let $likeCounter = $(`<span>${tweet["likes"]}</span>`).addClass("likeCounter");
 
   $iconset.append($likeCounter);
 
