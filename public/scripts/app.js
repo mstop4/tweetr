@@ -6,6 +6,37 @@
 
 console.log("I am app.js");
 
+function calculateAge(createTime) {
+    // Calculate the time since the tweet was created.
+  let currentTime = new Date(Date.now());
+  let secondsAgo = Math.floor((currentTime - createTime) / 1000);
+
+  // Just now
+  if (secondsAgo === 0) {
+    return "Just now";
+
+  // In seconds
+  } else if (secondsAgo < 60) {
+    return secondsAgo + " seconds ago";
+
+  // In minutes
+  } else if (secondsAgo < 3600) {
+    return Math.floor(secondsAgo/60) + " minutes ago";
+
+  // In hours
+  } else if (secondsAgo < (3600 * 24)) {
+    return Math.floor(secondsAgo/3600) + " hours ago";
+
+  // In days
+  } else if (secondsAgo < (3600 * 24 * 7)) {
+    return Math.floor(secondsAgo/3600/24) + " days ago";
+
+  // More than a week
+  } else {
+    return createTime.toDateString();
+  }
+}
+
 // Creates a tweet element to display in the tweet list
 function createTweetElement(tweet) {
 
@@ -26,31 +57,7 @@ function createTweetElement(tweet) {
   let $footer = $("<footer></footer");
   $newTweet.append($footer);
 
-  // Calculate the time since the tweet was created.
-  let currentTime = new Date(Date.now());
-  let createTime = new Date(tweet["created_at"]);
-  let timeAgo = Math.floor((currentTime - createTime) / 1000);
-
-  // In seconds
-  if (timeAgo < 60) {
-    $footer.append($("<p></p>").text(timeAgo + " seconds ago"));
-
-  // In minutes
-  } else if (timeAgo < 3600) {
-    $footer.append($("<p></p>").text(Math.floor(timeAgo/60) + " minutes ago"));
-
-  // In hours
-  } else if (timeAgo < (3600 * 24)) {
-    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600) + " hours ago"));
-
-  // In days
-  } else if (timeAgo < (3600 * 24 * 7)) {
-    $footer.append($("<p></p>").text(Math.floor(timeAgo/3600/24) + " days ago"));
-
-  // More than a week
-  } else {
-    $footer.append($("<p></p>").text(createTime.toDateString()));
-  }
+  $footer.append($("<p></p>").text(calculateAge(new Date(tweet["created_at"])));
 
   let $iconset = $("<span></span>").addClass("iconset");
   $footer.append($iconset);
