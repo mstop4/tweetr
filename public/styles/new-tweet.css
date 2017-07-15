@@ -1,29 +1,46 @@
 /* new-tweet.sass */
 .new-tweet {
   font-family: "Philosopher", sans-serif;
-  background-color: #e0e0e0;
+  background: #B060FF;
+  background: -webkit-linear-gradient(#B060FF, #9661FF);
+  background: -o-linear-gradient(#B060FF, #9661FF);
+  background: -moz-linear-gradient(#B060FF, #9661FF);
+  background: linear-gradient(#B060FF, #9661FF);
   border-radius: 10px;
   padding: 0.5em 1em 1em;
   margin: 1em 1em 0 1em; }
   .new-tweet h2 {
+    font-family: "Gloria Hallelujah", cursive;
     border-bottom: 2px;
     border-bottom-style: solid;
-    border-color: #c0c0c0; }
+    border-color: #c0c0ff; }
   .new-tweet textarea {
+    height: 5em;
     width: 100%;
+    margin: 0 0 1em;
     padding: 4px; }
+  .new-tweet input {
+    background-color: #BBADFF;
+    border: 0;
+    border-radius: 8px;
+    margin: 0 0.5em;
+    width: 8em;
+    height: 2em;
+    font-family: "Gloria Hallelujah", cursive; }
 
 .counter {
   float: right;
   color: black; }
 
 .charOverflow {
-  color: red; }
+  color: #C00000; }
 
 .form-error {
-  color: red; }
+  color: #C00000;
+  font-weight: 900; }
 
 .form-ok {
-  color: green; }
+  color: #40FF40;
+  font-weight: 900; }
 
 /*# sourceMappingURL=new-tweet.css.map */

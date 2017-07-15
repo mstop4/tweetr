@@ -5,10 +5,10 @@
   width: 100%;
   height: 80px;
   background: #B060FF;
-  background: -webkit-linear-gradient(#B060FF, #60B0FF);
-  background: -o-linear-gradient(#B060FF, #60B0FF);
-  background: -moz-linear-gradient(#B060FF, #60B0FF);
-  background: linear-gradient(#B060FF, #60B0FF);
+  background: -webkit-linear-gradient(#B060FF, #9661FF);
+  background: -o-linear-gradient(#B060FF, #9661FF);
+  background: -moz-linear-gradient(#B060FF, #9661FF);
+  background: linear-gradient(#B060FF, #9661FF);
   color: #e8fdff;
   padding-left: 2em;
   padding-right: 2em;
@@ -28,7 +28,7 @@
     margin-right: 5px;
     z-index: 2; }
   #nav-bar .compose {
-    background-color: #80ffc0;
+    background-color: #BBADFF;
     border: 0;
     border-radius: 8px;
     margin: auto 0;
