@@ -1,10 +1,18 @@
-# Tweeter Project
+# Tweeter
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. Built upon [this starter code](https://github.com/lighthouse-labs/tweetr) to practice HTML5, CSS, Sass, Javascript, jQuery and AJAX front-end skills, and Node, Express, MongoDB, and Heroku back-end skills.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Screenshots
 
-## Getting Started
+!["Copose a Tweet"](https://github.com/mstop4/tweetr/blob/master/doc/birbs.png)
+!["Tweet List"](https://github.com/mstop4/tweetr/blob/master/doc/tweets.png)
+!["Tweet is too long!](https://github.com/mstop4/tweetr/blob/master/doc/too-long.png)
+
+## Demo
+
+Go to **https://bref-maison-92580.herokuapp.com/** in your favourite browser.
+
+## How to Use in a Few Easy Steps
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
@@ -15,3 +23,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- MongoDB
+- body-parser
+- chance
+- dotenv
+- md5
