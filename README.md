@@ -16,8 +16,13 @@ Go to **https://bref-maison-92580.herokuapp.com/** in your favourite browser.
 
 1. Clone this repository.
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+3. Create a .env file in the root directory of the project and add the following lines:
+```
+MONGODB_URI=mongodb://127.0.0.1:27017/tweets
+PORT=8080
+```
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
