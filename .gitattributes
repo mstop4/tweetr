@@ -1,2 +1,2 @@
 #ignore files for linguist
-./public/styles/font-awesome/* linguist-vendored
+public/styles/font-awesome/* linguist-vendored
