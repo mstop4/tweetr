@@ -1,6 +1,6 @@
 # Tweeter
 
-Tweeter is a simple, single-page Twitter clone. Built to practice HTML5, CSS, Sass, Javascript, jQuery and AJAX front-end skills, and Node, Express, MongoDB, and Heroku back-end skills.
+Tweeter is a simple, single-page, full-stack Twitter clone.
 
 ## Screenshots
 
