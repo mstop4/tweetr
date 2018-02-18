@@ -19,7 +19,7 @@ $(document).ready( function() {
       setTimeout(() => { resetMessage(messageLabel) }, 3000);
       return;
 
-    } else if (message.length > 140) {
+    } else if (message.length > 280) {
       messageLabel.text("Tweet is too long!").addClass("form-error").removeClass("form-ok");
       setTimeout(() => { resetMessage(messageLabel) }, 3000);
       return;

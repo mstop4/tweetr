@@ -1,13 +1,13 @@
 // Keeps track of characters remaining
 function countCharacters() {
 
-  const maxChars = 140;
+  const maxChars = 280;
   let charsLeft = maxChars - $(this).val().length;
   let counterLabel = $(this).closest(".new-tweet").find(".counter");
 
   counterLabel.text(charsLeft);
 
-  // If over the 140-character limit, make the text red.
+  // If over the 280-character limit, make the text red.
   // Otherwise, reset it to black
   if (charsLeft < 0 ) {
     counterLabel.addClass("charOverflow");
