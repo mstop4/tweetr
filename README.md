@@ -1,4 +1,4 @@
-# Tweeter
+# Tweetr
 
 Tweeter is a simple, single-page Twitter clone. Built to practice HTML5, CSS, Sass, Javascript, jQuery and AJAX front-end skills, and Node, Express, MongoDB, and Heroku back-end skills.
 
@@ -10,7 +10,7 @@ Tweeter is a simple, single-page Twitter clone. Built to practice HTML5, CSS, Sa
 
 ## Demo
 
-Go to **https://bref-maison-92580.herokuapp.com/** in your favourite browser.
+Go to **https://mstop4-tweetr.herokuapp.com/** in your favourite browser.
 
 ## How to Use in a Few Easy Steps
 
