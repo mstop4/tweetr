@@ -28,7 +28,7 @@ PORT=8080
 
 - Express
 - Node 5.10.x or above
-- MongoDB
+- MongoDB 2.2.30
 - body-parser
 - chance
 - dotenv
